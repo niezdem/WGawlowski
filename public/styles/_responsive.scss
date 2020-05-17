@@ -1,0 +1,43 @@
+@media (max-width: 50rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .contact-container .contact-icon {
+    font-size: 1.25rem;
+  }
+
+  // Header
+  .header_background {
+    background-size: auto 100%;
+
+    .header_second-heading {
+      font-size: 1.125rem;
+    }
+  }
+
+  // Services
+  .services_container {
+    margin-top: 2rem;
+  }
+
+  .service_block {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  .container {
+    padding: 5rem 1.4rem;
+  }
+}

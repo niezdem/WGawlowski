@@ -1,0 +1,84 @@
+// Variables
+$color-primary: #16101d;
+$color-secondary: #313455;
+$color-text: #7a7086;
+$color-light: #f7f7fc;
+$color-white: #ffffff;
+
+// Partials
+@import "fonts";
+@import "header";
+@import "services";
+@import "about";
+@import "footer";
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 1.25rem;
+  color: $color-secondary;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  color: $color-secondary;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+p {
+  color: $color-text;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.text-light {
+  color: $color-light;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  width: 100%;
+  max-width: 75rem;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+
+  .contact-text,
+  .contact-icon {
+    color: $color-light;
+    font-size: 1.25rem;
+  }
+
+  .contact-icon {
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+// Partial with responsive styles
+@import "responsive";

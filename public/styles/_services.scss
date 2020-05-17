@@ -1,0 +1,39 @@
+.services_background {
+  background-color: $color-white;
+}
+
+.services_text {
+  max-width: 50rem;
+  text-align: center;
+}
+
+.services_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.service_block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1.5rem;
+  padding: 1rem;
+  width: 21rem;
+
+  .service_heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+
+    h2 {
+      margin: 0;
+    }
+
+    .fas {
+      margin-right: 0.875rem;
+      color: $color-secondary;
+      font-size: 2rem;
+    }
+  }
+}

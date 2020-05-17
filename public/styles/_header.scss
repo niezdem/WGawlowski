@@ -1,0 +1,19 @@
+.header_background {
+  background-image: url("/images/header_bg.png");
+  background-color: $color-primary;
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .header_heading {
+    margin: 5rem 0 0.75rem;
+  }
+
+  .header_second-heading {
+    margin-bottom: 1.5rem;
+    max-width: 40rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
