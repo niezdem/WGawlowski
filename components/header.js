@@ -4,7 +4,7 @@ const Header = () => (
       <h1 className="header_heading text-light">Cześć,</h1>
       <h2 className="header_second-heading text-light">
         nazywam się Wojciech Gawłowski i jestem spawaczem z wieloletnim
-        doświadczeniem. Zajmuję się usługami instylacyjnymi.
+        doświadczeniem. Zajmuję się usługami instalacyjnymi.
       </h2>
       <div className="contact-container">
         <i className="contact-icon fas fa-phone-alt"></i>

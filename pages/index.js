@@ -9,6 +9,7 @@ export default () => (
     <Head>
       <title>Wojciech Gawlowski</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="format-detection" content="telephone=no" />
     </Head>
 
     <Header />
