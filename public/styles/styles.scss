@@ -12,6 +12,10 @@ $color-white: #ffffff;
 @import "about";
 @import "footer";
 
+html {
+  background-color: $color-primary;
+}
+
 *,
 body {
   margin: 0;
