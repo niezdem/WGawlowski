@@ -10,7 +10,7 @@ const About = () => (
           rozwiązaniami technologicznymi, a do każdego projektu podchdzę z
           największą staralnością.
         </p>
-        <h2>Uprawnenia i sertyfikaty :</h2>
+        <h2>Uprawnenia i certyfikaty :</h2>
         <ul>
           <li>–– Certyfikat na stale nierdzewne (DVS).</li>
           <li>–– Certyfikat na stale czarne (DVS).</li>

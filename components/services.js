@@ -6,7 +6,7 @@ const serviceData = [
     icon: "fas fa-bolt",
     heading: "Spawanie",
     text:
-      "Spawanie stali nierdzewnych i kwasoodpornych, aluminium i stali czarnych. Lutowanie kolorowych metali.",
+      "Spawanie stali nierdzewnych i kwasoodpornych, stali czarnych, aluminium i kolorowych metali. Lutowanie na twardo.",
   },
   {
     key: 1,
