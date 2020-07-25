@@ -1,0 +1,15 @@
+.carousel_background {
+  background-color: $color-white;
+
+  .container {
+    padding-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  .carousel-root {
+    max-width: 100%;
+  }
+}

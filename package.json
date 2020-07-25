@@ -9,6 +9,7 @@
     "next": "^9.3.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-responsive-carousel": "^3.2.9",
     "sass": "1.26.3"
   }
 }
