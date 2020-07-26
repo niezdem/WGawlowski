@@ -14,6 +14,7 @@ const About = () => (
         <ul>
           <li>–– Certyfikat na stale nierdzewne (DVS).</li>
           <li>–– Certyfikat na stale czarne (DVS).</li>
+          <li>–– Certyfikat na aluminium (DVS).</li>
           <li>–– Certyfikat na lutowanie metali kolorowych i innych.</li>
           <li>–– Certyfikat F-Gazy.</li>
           <li>
