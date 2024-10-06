@@ -1,0 +1,10 @@
+{
+  "Navbar": {
+    "home": "Główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "partners": "Partnerze",
+    "certificates": "Certifikaty",
+    "contact": "Kontakty"
+  }
+}
