@@ -45,7 +45,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-gray-500">
-      <div className="w-container mb-10 flex flex-shrink-0 items-center justify-between py-4 md:mb-20">
+      <div className="w-container flex flex-shrink-0 items-center justify-between !py-4">
         <section className="flex items-center gap-4">
           {navBar.map((props, key) => (
             <Link key={key} href={props.link}>

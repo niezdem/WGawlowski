@@ -35,7 +35,7 @@ type Props = {
 const Title = ({
   order = 1,
   size = "2xl",
-  color = "text-zinc-100",
+  color = "text-stone-800",
   align = "left",
   backlight,
   className,
