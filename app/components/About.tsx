@@ -1,6 +1,5 @@
-import { useTranslations } from "next-intl";
-import Title from "@/components/ui/Title";
-import Text from "@/components/ui/Text";
+import Text from "@/app/components/ui/Text";
+import Title from "@/app/components/ui/Title";
 
 const Hero = () => {
   // const t = useTranslations("About");

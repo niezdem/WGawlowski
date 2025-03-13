@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { Poppins } from "next/font/google";
 
+import NavBar from "@/app/components/Navbar";
 import "./globals.css";
-import NavBar from "@/components/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
