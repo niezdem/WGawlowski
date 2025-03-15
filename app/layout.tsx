@@ -38,7 +38,7 @@ export default async function RootLayout({
       <body className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
           <NavBar />
-          <main className="flex flex-grow flex-col">
+          <main className="isolate">
             {/* <BackButton /> */}
             {children}
           </main>

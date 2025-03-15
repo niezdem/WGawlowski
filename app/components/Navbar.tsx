@@ -1,19 +1,18 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations, useLocale } from "next-intl";
 
-import Text from "./ui/Text";
 import {
   Listbox,
-  ListboxOptions,
   ListboxOption,
+  ListboxOptions,
   Transition,
 } from "@headlessui/react";
-import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
-import { CheckIcon } from "@heroicons/react/24/outline";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import Text from "./ui/Text";
 
 const languages = [
   { code: "pl", name: "Polski" },
@@ -44,7 +43,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-gray-500">
+    <nav className="bg-gray-100">
       <div className="w-container flex flex-shrink-0 items-center justify-between !py-4">
         <section className="flex items-center gap-4">
           {navBar.map((props, key) => (

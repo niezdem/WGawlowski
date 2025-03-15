@@ -1,90 +1,34 @@
-import * as React from "react";
+import { BaseTypographyProps, getSizeClasses } from "@/app/types/typo";
 import { cn } from "@/lib/utils";
 
-const sizeClasses = {
-  xs: "text-xs",
-  sm: "text-sm",
-  md: "text-base",
-  lg: "text-lg",
-  xl: "text-xl",
-  "2xl": "text-2xl",
-  "3xl": "text-3xl",
-  "4xl": "text-4xl",
-} as const;
-
-export type SizeClassKey = keyof typeof sizeClasses;
-export type ResponsiveSize = {
-  default: SizeClassKey;
-  sm?: SizeClassKey;
-  md?: SizeClassKey;
-  lg?: SizeClassKey;
-  xl?: SizeClassKey;
-};
-
-type Props = {
-  size?: SizeClassKey | ResponsiveSize;
-  color?: string;
-  weight?: "normal" | "bold";
-  align?: "left" | "center" | "right";
-  truncate?: boolean;
-  backlight?: boolean;
-  className?: string;
-  children: React.ReactNode;
+type TextProps = BaseTypographyProps & {
+  weight?: "normal" | "medium" | "semibold";
 };
 
 const Text = ({
-  size = "lg",
-  color = "text-stone-800/60",
+  size = "base",
+  color = "text-stone-600",
   weight = "normal",
-  align = "left",
-  truncate,
   backlight,
+  textPretty,
   className,
   children,
-}: Props) => {
-  const getSizeClasses = (sizeProps: Props["size"]): string => {
-    if (typeof sizeProps === "string") {
-      return sizeClasses[sizeProps];
-    }
-
-    if (typeof sizeProps === "object") {
-      return Object.entries(sizeProps)
-        .map(([breakpoint, value]) =>
-          breakpoint === "default"
-            ? sizeClasses[value]
-            : `${breakpoint}:${sizeClasses[value]}`
-        )
-        .join(" ");
-    }
-
-    if (typeof size === "string" && size in sizeClasses) {
-      return sizeClasses[size as SizeClassKey];
-    }
-
-    return sizeClasses["lg"];
-  };
-
-  const colorClass = color && `${color}`;
+}: TextProps) => {
   const weightClass = {
     normal: "font-normal",
-    bold: "font-semibold",
-  };
-  const alignClass = {
-    left: "text-left",
-    center: "text-center",
-    right: "text-right",
-  };
-  const truncateClass = truncate && "truncate";
-  const backlightClass =
-    backlight && "rounded-md bg-zinc-300/20 px-2 py-0.5 font-semibold";
+    medium: "font-medium",
+    semibold: "font-semibold",
+  }[weight];
+
+  const backlightClass = backlight && "rounded-md bg-zinc-300/20 px-2 py-0.5";
+  const textPrettyClass = textPretty && "text-pretty";
 
   const classes = cn(
     getSizeClasses(size),
-    colorClass,
-    weightClass[weight],
-    alignClass[align],
-    truncateClass,
+    color,
+    weightClass,
     backlightClass,
+    textPrettyClass,
     className
   );
 
