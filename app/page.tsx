@@ -1,3 +1,4 @@
+import Certificates from "./components/Certificates";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
+      <Certificates />
     </>
   );
 }

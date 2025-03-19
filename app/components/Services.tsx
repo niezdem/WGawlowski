@@ -22,40 +22,36 @@ const ServiceDescription = () => (
       profesjonalizmu, zawsze dbając o najwyższą jakość wykonania i
       bezpieczeństwo instalacji.
     </Text>
-    <Text size="base" className="mt-6 max-w-xl">
+    <Text className="mt-6 max-w-xl">
       Moją główną specjalnością jest precyzyjne spawanie{" "}
-      <Text size="base" backlight>
-        stali nierdzewnej, czarnej i aluminium
-      </Text>
-      , które wykonuję zarówno w warsztacie, jak i u klienta. Wykorzystuję
-      najwyższej klasy sprzęt renomowanych marek: KEMPPI, ORBITALUM, HILTI,
-      BOSCH, MILWAUKEE. Do prac ziemnych używam niezawodnej minikoparki YANMAR.
+      <Text backlight>stali nierdzewnej, czarnej i aluminium</Text>, które
+      wykonuję zarówno w warsztacie, jak i u klienta. Wykorzystuję najwyższej
+      klasy sprzęt renomowanych marek: KEMPPI, ORBITALUM, HILTI, BOSCH,
+      MILWAUKEE. Do prac ziemnych używam niezawodnej minikoparki YANMAR.
       Uzupełnieniem oferty jest własny warsztat tokarski, gdzie wykonuję
       spersonalizowane elementy i części, niezbędne do realizacji nietypowych
-      projektów instalacyjnych. W każdym projekcie łączę techniczne
-      doświadczenie z przyjaznym podejściem - bo ciepło to nie tylko
-      temperatura, ale też relacje!
+      projektów instalacyjnych.
     </Text>
   </div>
 );
 
 const ServiceStats = ({ stats }: { stats: Stat[] }) => (
   <div className="lg:flex lg:flex-auto lg:justify-center">
-    <dl className="w-64 space-y-8 xl:w-80">
+    <div className="w-64 space-y-8 xl:w-80">
       {stats.map((stat) => (
-        <div key={stat.label} className="flex flex-col gap-y-4">
+        <div key={stat.label} className="flex flex-col gap-y-2">
           <Title>{stat.value}</Title>
           <Text>{stat.label}</Text>
         </div>
       ))}
-    </dl>
+    </div>
   </div>
 );
 
 const Services = () => {
   return (
     <>
-      <Container className="-mt-12 sm:mt-0 xl:-mt-8">
+      <Container className="-mt-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <Title textPretty>Profesjonalne usługi</Title>
 
@@ -63,15 +59,14 @@ const Services = () => {
             <ServiceDescription />
             <ServiceStats stats={stats} />
           </div>
+
+          <img
+            alt=""
+            src="/img/service.jpg"
+            className="aspect-5/3 w-full object-cover rounded-3xl mt-20 lg:mt-40"
+          />
         </div>
       </Container>
-      <div className="hidden xl:block mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-        <img
-          alt=""
-          src="/img/service.jpg"
-          className="aspect-5/3 w-full object-cover xl:rounded-3xl"
-        />
-      </div>
     </>
   );
 };
