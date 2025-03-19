@@ -30,21 +30,19 @@ export type BaseTypographyProps = {
 };
 
 export const getSizeClasses = (
-  sizeProps: SizeClassKey | ResponsiveSize
+  sizeProps: BaseTypographyProps["size"]
 ): string => {
+  if (!sizeProps) return sizeClasses["base"];
+
   if (typeof sizeProps === "string") {
     return sizeClasses[sizeProps];
   }
 
-  if (typeof sizeProps === "object") {
-    return Object.entries(sizeProps)
-      .map(([breakpoint, value]) =>
-        breakpoint === "default"
-          ? sizeClasses[value]
-          : `${breakpoint}:${sizeClasses[value]}`
-      )
-      .join(" ");
-  }
-
-  return sizeClasses["base"];
+  return Object.entries(sizeProps)
+    .map(([breakpoint, value]) =>
+      breakpoint === "default"
+        ? sizeClasses[value]
+        : `${breakpoint}:${sizeClasses[value]}`
+    )
+    .join(" ");
 };

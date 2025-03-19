@@ -3,7 +3,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 
-import NavBar from "@/app/components/Navbar";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -37,7 +36,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
-          <NavBar />
+          {/* <NavBar /> */}
           <main className="isolate">
             {/* <BackButton /> */}
             {children}

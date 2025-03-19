@@ -6,11 +6,11 @@ type TextProps = BaseTypographyProps & {
 };
 
 const Text = ({
-  size = "base",
+  size = { default: "lg", sm: "xl" },
   color = "text-stone-600",
-  weight = "normal",
+  weight = "medium",
   backlight,
-  textPretty,
+  textPretty = true,
   className,
   children,
 }: TextProps) => {
@@ -20,7 +20,8 @@ const Text = ({
     semibold: "font-semibold",
   }[weight];
 
-  const backlightClass = backlight && "rounded-md bg-zinc-300/20 px-2 py-0.5";
+  const backlightClass =
+    backlight && "bg-amber-100 px-1 rounded-sm text-amber-900 font-medium";
   const textPrettyClass = textPretty && "text-pretty";
 
   const classes = cn(
