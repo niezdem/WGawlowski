@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const Title = ({
   size = { default: "4xl", sm: "5xl" },
-  color = "text-gray-900",
+  color = "text-stone-900",
   textPretty,
   className,
   children,

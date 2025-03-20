@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 
+import Footer from "./components/Footer";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -41,7 +42,7 @@ export default async function RootLayout({
             {/* <BackButton /> */}
             {children}
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

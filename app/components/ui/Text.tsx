@@ -8,7 +8,7 @@ type TextProps = BaseTypographyProps & {
 const Text = ({
   size = { default: "lg", sm: "xl" },
   color = "text-stone-600",
-  weight = "medium",
+  weight = "normal",
   backlight,
   textPretty = true,
   className,
@@ -21,7 +21,7 @@ const Text = ({
   }[weight];
 
   const backlightClass =
-    backlight && "bg-amber-100 px-1 rounded-sm text-amber-900 font-medium";
+    backlight && "bg-amber-100 px-1 rounded-sm text-amber-700 font-semibold";
   const textPrettyClass = textPretty && "text-pretty";
 
   const classes = cn(

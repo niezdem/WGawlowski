@@ -75,12 +75,14 @@ const GradientBackground = () => (
 const HeroContent = () => (
   <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
     <Title size={{ default: "5xl", sm: "7xl" }}>
-      Od precyzyjnego spawu po trwałe ciepło
+      Od precyzyjnego spawu po{" "}
+      <span className="text-amber-700">trwałe ciepło</span>
     </Title>
     <Text className="mt-8 sm:max-w-md lg:max-w-none">
-      Nazywam się Wojciech Gawłowski i od lat doskonalę sztukę precyzyjnego
-      spawania. Specjalizuję się w kompleksowych usługach instalacyjnych, łącząc
-      doświadczenie z niezawodnością. Zadbam o Twój komfort na lata.
+      Nazywam się <Text backlight>Wojciech Gawłowski</Text> i od lat doskonalę
+      sztukę precyzyjnego spawania. Specjalizuję się w kompleksowych usługach
+      instalacyjnych, łącząc doświadczenie z niezawodnością. Zadbam o Twój
+      komfort na lata.
     </Text>
   </div>
 );
